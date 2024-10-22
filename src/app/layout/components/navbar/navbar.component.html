@@ -1,0 +1,91 @@
+<nav class="fixed top-0 left-0 w-full bg-black text-white shadow-lg z-50">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <!-- Placeholder para a logo -->
+        <div class="flex justify-start flex-grow-0 w-1/4">
+            <div class="logo flex items-center">
+                <img src="assets/images/logo.png" alt="logo" class="h-10 w-auto">
+            </div>
+        </div>
+
+        <!-- Main Menu para maiores telas -->
+        <div class="links hidden lg:flex justify-center space-x-6 font-semibold w-2/4"> 
+            <a routerLink="/" class="relative group hover:text-gray-400">Home
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a routerLink="/purposes" class="relative group hover:text-gray-400">Propósitos
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a routerLink="/ministerios" class="relative group hover:text-gray-400">Ministérios
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a routerLink="/extensoes" class="relative group hover:text-gray-400">Extensões
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a routerLink="/contribuir" class="relative group hover:text-gray-400">Contribuir
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a href="#contacts" class="relative group hover:text-gray-400">Contactos
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+        </div>
+
+        <!-- Placeholder para os ícones das redes sociais -->
+        <div class="social hidden lg:flex justify-end space-x-4 w-1/4">
+            <a href="https://www.facebook.com/ICMAV" target="_blank" class="relative group hover:text-gray-400">
+                <i class="fa-brands fa-facebook"></i>
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a href="https://www.instagram.com/icmav/" target="_blank" class="relative group hover:text-gray-400">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a href="https://chat.whatsapp.com/EdGaqNUARdYB7HokXeleHR" target="_blank" class="relative group hover:text-gray-400">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+            <a href="https://www.youtube.com/c/icmavumaigrejacompropositos" target="_blank" class="relative group hover:text-gray-400">
+                <i class="fa-brands fa-youtube"></i>
+                <span class="absolute left-1/2 -bottom-1 w-0 h-0.5 bg-gray-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+            </a>
+        </div>
+
+        <!-- Burger Menu Button para dispositivos móveis -->
+        <button (click)="toggleMenu()" class="block lg:hidden text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div [class.hidden]="!isMenuOpen" class="fixed inset-0 bg-black p-4 lg:hidden flex flex-col justify-between items-center z-50">
+        <button (click)="toggleMenu()" class="self-end text-white text-2xl focus:outline-none mb-8">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="links flex flex-col space-y-4 text-center">
+            <a routerLink="/" class="hover:text-gray-300" (click)="toggleMenu()">Home</a>
+            <a routerLink="/purposes" class="hover:text-gray-300" (click)="toggleMenu()">Propósitos</a>
+            <a routerLink="/ministerios" class="hover:text-gray-300" (click)="toggleMenu()">Ministérios</a>
+            <a routerLink="/extensoes" class="hover:text-gray-300" (click)="toggleMenu()">Extensões</a>
+            <a routerLink="/contribuir" class="hover:text-gray-300" (click)="toggleMenu()">Contribuir</a>
+            <a href="#contacts" class="hover:text-gray-300" (click)="toggleMenu()">Contactos</a>
+        </div>
+
+        <div class="w-full mt-8">
+            <hr class="border-gray-600 my-4 w-full">
+            <div class="social flex justify-center space-x-6 text-lg">
+                <a href="https://www.facebook.com/ICMAV" target="_blank" class="hover:text-gray-300">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/icmav/" target="_blank" class="hover:text-gray-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://chat.whatsapp.com/EdGaqNUARdYB7HokXeleHR" target="_blank" class="hover:text-gray-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.youtube.com/c/icmavumaigrejacompropositos" target="_blank" class="hover:text-gray-300">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
