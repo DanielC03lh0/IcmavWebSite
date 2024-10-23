@@ -1,5 +1,5 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { ChurchEvent } from '../../../models/church-event.model';
+import { ChurchEvent } from '../../../../models/church-event.model';
 
 @Component({
   selector: 'app-event-modal',

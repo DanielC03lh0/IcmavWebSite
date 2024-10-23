@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { ChurchEvent } from '../../../models/church-event.model.js';  // Importar a classe ChurchEvent
+import { ChurchEvent } from '../../../../models/church-event.model.js';  // Importar a classe ChurchEvent
 
 @Component({
   selector: 'app-events-carousel',

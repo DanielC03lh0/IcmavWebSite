@@ -1,0 +1,12 @@
+<!-- Header with Background Image and Inner Shadow -->
+<div class="relative w-full h-[50vh] bg-cover bg-center" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+    <!-- Overlay with Shadow -->
+    <div *ngIf="darkFilter" class="absolute inset-0 bg-black bg-opacity-50 shadow-inner"></div>
+  
+    <!-- Text Content (Centered) -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+      <h1 class="text-3xl lg:text-4xl font-bold drop-shadow-md">{{ title }}</h1>
+      <p class="text-xl lg:text-2xl italic mt-2 text-gray-300">{{ description }}</p>
+    </div>
+  </div>
+  
