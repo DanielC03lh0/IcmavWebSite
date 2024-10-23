@@ -1,0 +1,19 @@
+<app-big-header></app-big-header>
+
+<!-- MAIN CONTENT CONTAINER -->
+<main class="bg-black pt-20">
+
+    <app-about-us></app-about-us>
+
+    <app-verse-banner
+        [bannerImage]="'assets/images/banner.jpg'"
+        [mainText]="'Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.'"
+        [verse]="'João 14:6'">
+    </app-verse-banner>
+
+    <app-events-carousel (eventSelected)="onEventSelected($event)"></app-events-carousel>
+    <app-event-modal [event]="selectedEvent" [isModalOpen]="isModalOpen" (closeModalEvent)="closeModal()"></app-event-modal>
+
+    <app-contacts></app-contacts>
+
+</main>

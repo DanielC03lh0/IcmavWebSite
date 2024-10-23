@@ -1,0 +1,35 @@
+<div id="events" class="container mx-auto px-4 py-12 lg:px-8">
+    <!-- Título do Carrossel -->
+    <h2 class="text-4xl font-bold text-center text-white mb-8">Próximos Eventos</h2>
+  
+    <!-- Secção do Carrossel -->
+    <div class="relative flex items-center justify-center h-auto overflow-hidden">
+      <div #carousel class="flex justify-between w-full h-auto transition-transform duration-500 ease-in-out gap-3">
+        <!-- Os itens do carrossel serão adicionados dinamicamente -->
+      </div>
+    </div>
+  
+    <!-- Controlos e Indicadores -->
+    <div class="flex flex-col items-center justify-center mt-8 space-y-4">
+      <div class="flex items-center space-x-4">
+        <!-- Botão Anterior -->
+        <button (click)="prev()" class="w-8 h-8 rounded-md bg-gray-700 hover:bg-gray-600 text-white transition duration-300">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+  
+        <!-- Indicadores do Carrossel (pontos) -->
+        <div #indicators class="flex space-x-2">
+            <!-- Os indicadores serão adicionados dinamicamente -->
+        </div>
+  
+        <!-- Botão Seguinte -->
+        <button (click)="next()" class="w-8 h-8 rounded-md bg-gray-700 hover:bg-gray-600 text-white transition duration-300">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Modal de Detalhes -->
+    <!-- Modal não está incluído aqui por ser um componente separado -->
+  </div>
+  
