@@ -20,6 +20,7 @@ import { VerseBannerComponent } from './layout/components/homepage/verse-banner/
 import { ContactsComponent } from './layout/components/homepage/contacts/contacts.component';
 
 import { PurposeComponent } from './layout/components/purposespage/purpose/purpose.component';
+import { ContributeComponent } from './layout/pages/contribute/contribute.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PurposeComponent } from './layout/components/purposespage/purpose/purpo
     ContactsComponent,
     VerseBannerComponent,
     
-    PurposeComponent
+    PurposeComponent,
+          ContributeComponent
   ],
   imports: [
     BrowserModule,
